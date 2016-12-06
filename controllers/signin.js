@@ -2,7 +2,7 @@
 
 module.exports = {
     'POST /signin': async(ctx, next) => {
-        var
+        let
             email = ctx.request.body.email || '',
             password = ctx.request.body.password || '';
         if (email === 'admin@example.com' && password === '123456') {

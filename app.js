@@ -6,7 +6,7 @@ const controller = require('./controller');
 
 const templating = require('./templating');
 
-const model = require('./model')
+const model = require('./model');
 
 const app = new Koa();
 
@@ -15,7 +15,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 // log request URL:
 app.use(async(ctx, next) => {
     console.log(`Process ${ctx.request.method} ${ctx.request.url}...`);
-    var
+    let
         start = new Date().getTime(),
         execTime;
     await next();

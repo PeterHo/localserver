@@ -3,7 +3,7 @@ const mime = require('mime');
 const fs = require('mz/fs');
 
 function staticFiles(url, dir) {
-    return async (ctx, next) => {
+    return async(ctx, next) => {
         let rpath = ctx.request.path;
         if (rpath.startsWith(url)) {
             let fp = path.join(dir, rpath.substring(url.length));
